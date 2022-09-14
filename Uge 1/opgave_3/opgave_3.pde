@@ -29,31 +29,30 @@ void setup() {
 }
 
 void draw() {
+  fill(bColor[0]);
+   
+    ellipse(200, 150, 40, 40);
+    ellipse(200, 200, 40, 40);
+    ellipse(200, 250, 40, 40);
   
   if (millis()/sec-timer < 3) {
     fill(bColor[2]);
     ellipse(200, 150, 40, 40);
-    fill(bColor[0]);
-    ellipse(200, 200, 40, 40);
-    ellipse(200, 250, 40, 40);
+
   } else if (millis()/sec-timer < 6) {
     fill(bColor[1]);
     ellipse(200, 200, 40, 40);
-    fill(bColor[0]);
+    fill(bColor[2]);
     ellipse(200, 150, 40, 40);
-    ellipse(200, 250, 40, 40);
+   
   } else if (millis()/sec-timer < 9) {
     fill(bColor[3]);
     ellipse(200, 250, 40, 40);
-    fill(bColor[0]);
-    ellipse(200, 150, 40, 40);
-    ellipse(200, 200, 40, 40);
+   
   } else if (millis()/sec-timer < 12){
     fill(bColor[1]);
     ellipse(200, 200, 40, 40);
-    fill(bColor[0]);
-    ellipse(200, 150, 40, 40);
-    ellipse(200, 250, 40, 40);
+   
   } 
   else {timer=floor(millis()/1000);
   println(floor(millis()/sec)-timer);

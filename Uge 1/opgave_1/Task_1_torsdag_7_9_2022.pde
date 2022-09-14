@@ -1,6 +1,6 @@
 String name="Julius";
 int age=23;
-boolean happy=true;
+boolean happy=false;
 
 void setup(){
 println("My name is " + name);
