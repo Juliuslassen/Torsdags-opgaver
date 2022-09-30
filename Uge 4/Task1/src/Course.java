@@ -11,4 +11,8 @@ public class Course {
         return "Course: " + name;
     }
 
+    public String getName(){
+         return name;
+    }
+
 }

@@ -1,4 +1,4 @@
-public class Main {
+/*public class Main {
 
     static Student jack= new Student("Jack");
     static Course course1 = new Course("programmering 101");
@@ -9,4 +9,4 @@ public class Main {
         System.out.println(jack.toString());
 
     }
-}
+}*/
