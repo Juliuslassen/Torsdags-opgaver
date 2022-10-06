@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma layout smetana
+class Main
+class Driver
+class Car
+
+Main : - static Car
+Main : - static Driver
+Main : + Static void main()
+
+Driver : - String name;
+Driver : - int age;
+Driver : + Driver( name, age);
+Driver : + String toString();
+
+Car : - String manufacturer;
+Car : - String model;
+Car : - int year;
+Car : - String bodyStyle;
+Car : - Driver driver;
+Car : + Car(manufacturer, model, year, bodyStyle);
+Car : + void setDriver(Driver driver);
+Car : + Driver getDriver();
+Car : + String toString();
+
+Main *-- Driver : has-a
+Main *-- Car : has-a
+
+@enduml

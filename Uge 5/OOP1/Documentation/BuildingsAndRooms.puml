@@ -1,0 +1,44 @@
+@startuml
+!pragma layout smetana
+'https://plantuml.com/object-diagram
+
+class Main
+class Building
+class Room
+
+Main : + static ArrayList<Room> rooms;
+
+Main : + Static void main()
+Main : + static int countLampsInBuilding(Building building)
+Main : + static boolean isNormal(Building building)
+
+Room : - int numberOfDoors;
+Room : - int numberOfLamps;
+Room : - int numberOfWindos;
+Room : + void setNumberOfDoors( numberOfDoors)
+Room : + void setNumberOfDoors( numberOfLamps)
+Room : + void setNumberOfDoors( numberOfWindos)
+Room : + int getNumberOfDoors()
+Room : + int getNumberOfLamps()
+Room : + int getNumberOfWindos()
+Room : + Room(numberOfDoors,numberOfLamps,numberOfWindos)
+
+Building : - final ArrayList<Room> rooms
+Building : - int numberOfBathrooms;
+Building : - int numberOfFloors;
+Building : - boolean isOfficeBuilding;
+Building : + Building(rooms, numberOfBathrooms, numberOfFloors, isOfficeBuilding);
+Building : + void setNumberOfBathrooms(numberOfBathrooms)
+Building : + void setNumberOfFloors(numberOfFloors)
+Building : + void setOfficeBuilding( OfficeBuilding)
+Building : + ArrayList<Room> getRooms()
+Building : + int getNumberOfBathrooms()
+Building : + int getNumberOfFloors()
+Building : + boolean isOfficeBuilding()
+
+Main *-- Building : Has-a
+Main *-- Room : Has-a
+
+
+
+@enduml
